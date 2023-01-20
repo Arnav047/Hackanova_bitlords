@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical supply chain</title>
+</head>
+<body>
+    <div class="login">
+        <h1>Predicting the shipment mode</h1>
+        
+        <form action="{{url_for('predict')}}"method="post">
+            <input type="text" name="Sub Classification" placeholder="Sub Classification" required="required"/>
+            <input type="text" name="Unit of Measure (Per Pack)" placeholder="Unit of Measure (Per Pack)" required="required"/>
+            <input type="text" name="Scheduled Delivery Date Year" placeholder="Scheduled Delivery Date Year" required="required"/>
+            <input type="text" name="Scheduled Delivery Date Month" placeholder="Scheduled Delivery Date Month" required="required"/>
+            <input type="text" name="Scheduled Delivery Date Day" placeholder="Scheduled Delivery Date Day" required="required"/>
+            <input type="text" name="Delivered to Client Date Year" placeholder="Delivered to Client Date Year" required="required"/>
+            <input type="text" name="Delivered to Client Date Month" placeholder="Delivered to Client Date Month" required="required"/>
+            <input type="text" name="Delivered to Client Date Day" placeholder="Delivered to Client Date Day" required="required"/>
+            <input type="text" name="Delivery Recorded Date Year" placeholder="Delivery Recorded Date Year" required="required"/>
+            <input type="text" name="Delivery Recorded Date Month" placeholder="Delivery Recorded Date Month" required="required"/>
+            <input type="text" name="Delivery Recorded Date Day" placeholder="Delivery Recorded Date Day" required="required"/>
+            <input type="text" name="Line Item Quantity" placeholder="Line Item Quantity" required="required"/>
+            <input type="text" name="Line Item Value" placeholder="Line Item Value" required="required"/>
+            <input type="text" name="Pack Price" placeholder="Pack Price" required="required"/>
+            <input type="text" name="First Line Designation" placeholder="First Line Designation" required="required"/>
+            <input type="text" name="Weight (Kilograms)" placeholder="Weight (Kilograms)" required="required"/>
+            <input type="text" name="Freight Cost (USD)" placeholder="Freight Cost (USD)" required="required"/>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+<br>
+<br>
+     {{prediction_text}}
+
+     <br>
+     <br>
+    </div>
+
+
+</body>
+</html>
