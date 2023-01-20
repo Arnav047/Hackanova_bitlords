@@ -53,36 +53,36 @@ div {
 
 <body>
 
-<center><h3>Delivery Date Prediction</h3></center>
+<center><h3>Weight Prediction</h3></center>
 
 <div>
   <form method="POST">
     
-    <label>Shipment Mode</label>
+    <label>Pack Price</label>
     <input type ="number" value = 1 name = 'data1'></input>
     <br>
-    <lablel>Scheduled Delivery Date Year</lablel>
+    <lablel>Line Item Insurance (USD)</lablel>
     <input type ="number" value = 1 name = 'data2'></input>
     <br>
   
     <br>
-    <label>Scheduled Delivery Date Month</label>
+    <label>Unit Price</label>
     <input type ="number" value = 1  name = 'data12'></input>
 
     <br>
-    <label>Scheduled Delivery Date Today</label>
+    <label>Line Item Quantity</label>
     <input type ="number" value = 1  name = 'data13'></input>
- 
     <br>
- 
+    <label>Line Item Value</label>
+    <input type ="number" value = 1  name = 'data14'></input> 
    
     <input type="submit" value="Submit">
   </form>
 </div>
 
-<h2>Predicted Shipment Delivery Day : {{prediction}}</h2>
-<a href="/predict">Prediction of shipment mode</a>
+<h2>Predicted Weight : {{prediction}}</h2>
+<a href="/predictdate">Prediction of Delivery</a>
 <br>
-<a href="/predictweight">Prediction of weights</a>
+<a href="/predict">Prediction of shipment mode</a>
 </body>
 </html>

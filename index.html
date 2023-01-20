@@ -1,43 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical supply chain</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Nunito', sans-serif;
+      margin: 0;
+    }
+    
+  a{
+    
+    }
+  </style>
+  <title>Supply chain</title>
 </head>
 <body>
-    <div class="login">
-        <h1>Predicting the shipment mode</h1>
-        
-        <form action="{{url_for('predict')}}"method="post">
-            <input type="text" name="Sub Classification" placeholder="Sub Classification" required="required"/>
-            <input type="text" name="Unit of Measure (Per Pack)" placeholder="Unit of Measure (Per Pack)" required="required"/>
-            <input type="text" name="Scheduled Delivery Date Year" placeholder="Scheduled Delivery Date Year" required="required"/>
-            <input type="text" name="Scheduled Delivery Date Month" placeholder="Scheduled Delivery Date Month" required="required"/>
-            <input type="text" name="Scheduled Delivery Date Day" placeholder="Scheduled Delivery Date Day" required="required"/>
-            <input type="text" name="Delivered to Client Date Year" placeholder="Delivered to Client Date Year" required="required"/>
-            <input type="text" name="Delivered to Client Date Month" placeholder="Delivered to Client Date Month" required="required"/>
-            <input type="text" name="Delivered to Client Date Day" placeholder="Delivered to Client Date Day" required="required"/>
-            <input type="text" name="Delivery Recorded Date Year" placeholder="Delivery Recorded Date Year" required="required"/>
-            <input type="text" name="Delivery Recorded Date Month" placeholder="Delivery Recorded Date Month" required="required"/>
-            <input type="text" name="Delivery Recorded Date Day" placeholder="Delivery Recorded Date Day" required="required"/>
-            <input type="text" name="Line Item Quantity" placeholder="Line Item Quantity" required="required"/>
-            <input type="text" name="Line Item Value" placeholder="Line Item Value" required="required"/>
-            <input type="text" name="Pack Price" placeholder="Pack Price" required="required"/>
-            <input type="text" name="First Line Designation" placeholder="First Line Designation" required="required"/>
-            <input type="text" name="Weight (Kilograms)" placeholder="Weight (Kilograms)" required="required"/>
-            <input type="text" name="Freight Cost (USD)" placeholder="Freight Cost (USD)" required="required"/>
-            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-        </form>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <iframe title="hackanova" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=38ac0a30-7187-447c-ba67-a5bb9eec4a48&autoAuth=true&ctid=cca3f0fe-586f-4426-a8bd-b8146307e738" frameborder="0" allowFullScreen="true"></iframe>
+  <div id="root"></div>
 <br>
+<a href="/predictdate">Prediction of Delivery</a>
 <br>
-     {{prediction_text}}
-
-     <br>
-     <br>
-    </div>
-
+<a href="/predictweight">Prediction of weights</a>
+<br>
+<a href="/predict">Prediction of Shipment mode</a>
 
 </body>
+
 </html>
