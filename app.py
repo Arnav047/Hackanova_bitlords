@@ -3,8 +3,8 @@ import pickle
 import numpy as np
 
 app = Flask(__name__)
-model= pickle.load(open("model_mode.pkl","rb"))
-model2 = pickle.load(open("model_date.pkl","rb"))
+model= pickle.load(open("./model_mode.pkl","rb"))
+model2 = pickle.load(open("./model_date.pkl","rb"))
 
 
 @app.route('/')

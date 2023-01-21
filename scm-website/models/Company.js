@@ -16,6 +16,29 @@ const CompanySchema = new mongoose.Schema({
     required: true,
     maxlength: 60,
   },
+  companyEmail: {
+    type: String,
+    required: true,
+    maxlength: 60,
+  },
+  weightSold: {
+    type: [
+      {
+        year: { type: String, required: true },
+        wt: { type: String, required: true },
+      },
+    ],
+    required: true,
+  },
+  costSold: {
+    type: [
+      {
+        year: { type: String, required: true },
+        cost: { type: String, required: true },
+      },
+    ],
+    required: true,
+  },
 });
 
 const Company =

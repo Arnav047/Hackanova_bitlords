@@ -2,17 +2,26 @@ import dbConnect from "../../../util/mongo";
 // import Company from "../../../models/Company";
 // import Company from "../../../models/Company";
 import Company from "../../../models/Company";
+import axios from "axios";
 
 export default async function handler(req, res) {
-  const { method } = req;
+  const {
+    method,
+    query: { id },
+  } = req;
 
   dbConnect();
 
   if (method === "GET") {
     try {
-      const companys = await Company.find();
+      const companys = await Company.findOne({
+        companyName: req.query.id,
+      });
+
       res.status(200).json(companys);
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+    }
   }
   if (method === "POST") {
     try {
